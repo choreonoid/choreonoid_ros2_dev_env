@@ -25,6 +25,8 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 
 RUN touch /root/.bash_history
 
+RUN echo "rosdep install -i -y --from-path ~/ros2_ws/src"
+
 RUN echo "source install/setup.bash" >> /root/.bash_history
 
 RUN echo "colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release" >> /root/.bash_history
