@@ -24,6 +24,7 @@ git clone git@github.com:HansRobo/choreonoid_ros2_dev_env.git
 ```bash
 sudo pip install vcstool
 cd choreonoid_ros2_dev_env
+mkdir -p ros2_ws/src
 vcs import ros2_ws/src < choreonoid.repos
 ```
 
@@ -116,8 +117,6 @@ docker exec -it choreonoid_humble_gpu bash
 
 ```bash
 apt-get update
-apt-get install python3-rosdep
-rosdep init
 rosdep install -i -y --from-path ~/ros2_ws/src
 ```
 
