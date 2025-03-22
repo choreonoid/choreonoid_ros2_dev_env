@@ -55,27 +55,10 @@ sudo systemctl restart docker.service
 
 See [NVIDIA's official documents](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) for detailed explanation.
 
-## Build Container (Host)
-
-#### Without GPU
-
-```bash
-docker compose build choreonoid_humble
-```
-
-#### With GPU
-
-```bash
-docker compose build choreonoid_humble_gpu
-```
-
-#### Both
-
-```bash
-docker compose build
-```
-
 ## Start Container (Host)
+
+> [!NOTE]
+> For the first time, it will take some time to build the container.
 
 #### Without GPU
 
@@ -116,7 +99,6 @@ docker exec -it choreonoid_humble_gpu bash
 ### Install dependencies via rosdep (Container)
 
 ```bash
-apt-get update
 rosdep install -i -y --from-path ~/ros2_ws/src
 ```
 
