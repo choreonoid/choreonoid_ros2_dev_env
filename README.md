@@ -117,8 +117,6 @@ docker exec -it choreonoid_humble_gpu bash
 
 ```bash
 apt-get update
-apt-get install python3-rosdep
-rosdep init
 rosdep install -i -y --from-path ~/ros2_ws/src
 ```
 
